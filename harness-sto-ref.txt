@@ -1,0 +1,39 @@
+{  
+   "meta":{  
+      "key":[  
+         "issueName",  // impportant
+         "fileName"  
+      ],  
+   },  
+   "issues":[  
+      {  
+         "scanTool":"MySastTool",  // important
+         "issueName":"Cross Site Scripting",  
+         "issueDescription":"Lorem ipsum...",  // important 
+         "fileName":"homepage-jobs.php",  
+         "remediationSteps":"Fix me fast.",  // recommended
+         "risk":"high",
+         "severity":8,  // important
+         "status":"open",  
+         "referenceIdentifiers":[  // recommended
+            {  
+               "type":"cwe",  
+               "id":"79"  
+            }  
+         ]  
+      }  
+   ]  
+}
+
+jq '[.[] | {message: .commit.message, name: .commit.committer.name, parents: [.parents[].html_url]}]'
+
+[
+  {
+    "message": "Merge pull request #162 from stedolan/utf8-fixes\n\nUtf8 fixes. Closes #161",
+    "name": "Stephen Dolan",
+    "parents": [
+      "https://github.com/stedolan/jq/commit/54b9c9bdb225af5d886466d72f47eafc51acb4f7",
+      "https://github.com/stedolan/jq/commit/8b1b503609c161fea4b003a7179b3fbb2dd4345a"
+    ]
+  },
+  ...
